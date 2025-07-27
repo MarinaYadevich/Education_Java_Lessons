@@ -14,15 +14,15 @@ import lombok.Setter;
 @Getter @Setter
 public class Film {
 
-    @NotBlank(message = "Пожалуйста, заполните поле")
-    @Size(min = 2, max = 50, message = "Название должно быть не более 50 символов")
+    @NotBlank(message = "{film.notblank}")
+    @Size(min = 2, max = 50, message = "{film.title.size}")
     private String title;
 
-    @NotBlank(message = "Пожалуйста, заполните поле")
-    @Size(min = 2,max = 20, message = "Название должно быть не более 20 символов")
+    @NotBlank(message = "{film.notblank}")
+    @Size(min = 2,max = 20, message = "{film.director.size}")
     private String director;
 
-    @Min(value = 1895, message = "Год должен быть от 1895 до 2025")
-    @Max(value = 2025, message = "Год должен быть от 1895 до 2025")
+    @Min(value = 1895, message = "{film.year.size}")
+    @Max(value = 2025, message = "{film.year.size}")
     private int year;
 }
