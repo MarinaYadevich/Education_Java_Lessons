@@ -9,10 +9,14 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.UUID;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter @Setter
-public class Film {
+public class FilmDTO {
+
+    private UUID id;
 
     @NotBlank(message = "{film.notblank}")
     @Size(min = 2, max = 50, message = "{film.title.size}")
@@ -25,4 +29,5 @@ public class Film {
     @Min(value = 1895, message = "{film.year.size}")
     @Max(value = 2025, message = "{film.year.size}")
     private int year;
+
 }

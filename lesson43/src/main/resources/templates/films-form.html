@@ -8,7 +8,7 @@
 
 
 <h1 th:text="#{film.form.title}"></h1>
-<form th:action="@{/add}" method="post" th:object="${film}">
+<form th:action="@{/film/add}" method="post" th:object="${film}">
     <div>
         <label for="title" th:text="#{film.form.name}"></label>
         <input type="text" id="title" th:field="*{title}" th:placeholder="#{film.form.name.placeholder}">
@@ -28,6 +28,14 @@
     </div>
 
     <button type="submit" th:text="#{film.form.button.add}" ></button>
+</form>
+
+<hr>
+
+<form action = "/film/search" method="get">
+
+    Search title: <input type="text" name = "title" placeholder="Enter the movie title"><br>
+    <button type="submit">Search</button>
 </form>
 
 <h2 th:text="#{film.form.films.list}"></h2>
