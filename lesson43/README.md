@@ -10,12 +10,9 @@ It is also necessary to add validation of incoming data and page localization (t
 ## Lesson 44
 ## HomeTask
 
-Необходимо переписать домашнее задание прошлого урока на spring boot data jpa
+It is necessary to rewrite the homework of the previous lesson on spring boot data jpa.
 
-Реализовать
-
-1) сохранение фильмотеки в БД
-
-2) получение всех фильмов
-
-3) организовать возможность поиска по названию (полное совпадение)
+Implement:
+1) saving the film library in the DB
+2) getting all the films
+3) organize the ability to search by name (full match)
