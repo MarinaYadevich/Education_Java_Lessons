@@ -33,10 +33,7 @@ public class FilmController {
             model.addAttribute("films", filmService.findAll());
             return "films-form";
         }
-
-        System.out.println(filmDTO);
         filmService.save(filmDTO);
-       // filmsList.add(film);
         return "redirect:/film";
     }
 
