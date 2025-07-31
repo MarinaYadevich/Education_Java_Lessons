@@ -1,0 +1,10 @@
+app:
+  bet:
+#    min: 10
+    max: 100
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
