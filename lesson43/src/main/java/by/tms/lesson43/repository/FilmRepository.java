@@ -12,5 +12,4 @@ import java.util.UUID;
 public interface FilmRepository extends JpaRepository<FilmEntity, UUID>, JpaSpecificationExecutor<FilmEntity> {
 
     List<FilmEntity> findByTitle(String title);
-
 }

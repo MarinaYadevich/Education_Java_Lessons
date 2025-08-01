@@ -43,6 +43,4 @@ public class FilmServiceImpl implements FilmService {
     public List<FilmEntity> searchFilms(FilmSearchDTO dto) {
         return filmRepository.findAll(FilmSpecifications.createSpecification(dto));
     }
-
-
 }

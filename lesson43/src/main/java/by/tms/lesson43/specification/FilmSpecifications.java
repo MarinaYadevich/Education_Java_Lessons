@@ -15,7 +15,7 @@ public class FilmSpecifications {
 
             List<Predicate> predicates = new ArrayList<>();
 
-            //поиск по названию
+            //поиск по названию(Полное совпадение)
             if (dto.getTitle() != null && !dto.getTitle().isBlank()){
                 predicates.add(builder.or(builder.equal(root.get("title"), dto.getTitle())));
             }
@@ -28,7 +28,7 @@ public class FilmSpecifications {
 
             //поиск по количеству страниц от
             if (dto.getPageCountFrom() != null) {
-                predicates.add(builder.greaterThanOrEqualTo(root.get("page count"), dto.getPageCountFrom()));
+                predicates.add(builder.greaterThanOrEqualTo(root.get("pageCount"), dto.getPageCountFrom()));
             }
 
             // поиск по количеству страниц до

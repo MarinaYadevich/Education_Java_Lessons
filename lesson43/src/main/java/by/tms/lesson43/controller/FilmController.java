@@ -41,16 +41,11 @@ public class FilmController {
         return "redirect:/film";
     }
 
-//    @GetMapping("/search")
-//    public String searchFilm(@RequestParam String title, Model model) {
-//        var result = filmService.findFilmByTitle(title);
-//        model.addAttribute("films", result);
-//        model.addAttribute("film", new FilmDTO());
-//        return "films-form";
-//    }
-
     @GetMapping("/search")
-    public List<FilmEntity> search(@ModelAttribute FilmSearchDTO dto) {
-        return filmService.searchFilms(dto);
+    public String search(@ModelAttribute FilmSearchDTO dto, Model model) {
+        List<FilmEntity> films = filmService.searchFilms(dto);
+        model.addAttribute("films", films);
+        model.addAttribute("film", new FilmDTO());
+        return "films-form";
     }
 }

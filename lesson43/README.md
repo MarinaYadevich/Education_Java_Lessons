@@ -17,15 +17,15 @@ Implement:
 2) getting all the films
 3) organize the ability to search by name (full match)
 
-Урок 45
-Домашнее задание
+## Lesson 45
+## Homework
 
-Необходимо к прошлому проекту фильмотеки добавить flyway + и создать скрипты для создания таблиц.
+You need to add flyway to the previous film library project and create scripts to create tables.
 
-Организовать поиск по следующим полям (добавить к сущности):
-1) название
-2) количество страниц с
-3) количество страниц до
-4) по описанию (при помощи like)
+Organize search by the following fields (add to the entity):
+1) name (a complete match)
+2) number of pages from
+3) number of pages to
+4) by description (using like)
 
-Каждый критерий поиска не является обязательным.
+Each search criterion is optional.

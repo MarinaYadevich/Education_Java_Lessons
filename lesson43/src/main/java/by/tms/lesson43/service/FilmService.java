@@ -6,7 +6,6 @@ import by.tms.lesson43.model.FilmSearchDTO;
 
 import java.util.List;
 
-
 public interface FilmService {
 
     void save(FilmDTO filmDTO);
@@ -15,5 +14,5 @@ public interface FilmService {
 
     List<FilmDTO> findFilmByTitle(String title);
 
-    public List<FilmEntity> searchFilms(FilmSearchDTO dto);
+    List<FilmEntity> searchFilms(FilmSearchDTO dto);
 }

@@ -33,13 +33,19 @@
         <p th:if="${#fields.hasErrors('year')}" th:errors="*{year}"></p>
     </div>
 
+    <div>
+        <label for="pageCount" th:text="#{film.form.pageCount}"></label>
+        <input type="number" id="pageCount" th:field="*{pageCount}" th:placeholder="#{film.form.pageCount.placeholder}">
+        <p th:if="${#fields.hasErrors('pageCount')}" th:errors="*{pageCount}"></p>
+    </div>
+
     <button type="submit" th:text="#{film.form.button.add}" ></button>
 </form>
 
 <hr>
 
 <form action = "/film/search" method="get">
-    <h1 th:text="#{film.form.search.title}"></h1>
+    <h1 th:text="#{film.form.search}"></h1>
 
 <!--    Поиск по названию-->
     <div>
@@ -48,13 +54,13 @@
         <input type="text" name = "title" th:placeholder="#{film.form.search.title.placeholder}">
     </div>
 
-    <!-- По количеству страниц: от -->
+    <!-- По количеству страниц от -->
     <div>
         <label th:text="#{film.form.search.pageCountFrom.label}"></label>
         <input type="number" name="pageCountFrom" th:placeholder="#{film.form.search.pageCountFrom.placeholder}">
     </div>
 
-    <!-- По количеству страниц: до -->
+    <!-- По количеству страниц до -->
     <div>
         <label th:text="#{film.form.search.pageCountTo.label}"></label>
         <input type="number" name="pageCountTo" th:placeholder="#{film.form.search.pageCountTo.placeholder}">
@@ -75,7 +81,8 @@
         *** <strong th:text="${film.getTitle()}"></strong> ***
         <em th:text="${film.getDirector()}"></em> ,
         <em th:text="${film.getDescription()}"></em>,
-        <span th:text="${film.getYear()}"></span>
+        <span th:text="${film.getYear()}"></span> ---------
+        <span th:text="${film.getPageCount()}"></span>
     </li>
 </ul>
 </body>
