@@ -1,9 +1,12 @@
 package by.tms.lesson43.service.impl;
 
+import by.tms.lesson43.entity.FilmEntity;
 import by.tms.lesson43.mapper.FilmMapper;
 import by.tms.lesson43.model.FilmDTO;
+import by.tms.lesson43.model.FilmSearchDTO;
 import by.tms.lesson43.repository.FilmRepository;
 import by.tms.lesson43.service.FilmService;
+import by.tms.lesson43.specification.FilmSpecifications;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -35,4 +38,11 @@ public class FilmServiceImpl implements FilmService {
         var foundDto = filmMapper.toDTO(foundEntities);
         return foundDto;
     }
+
+    @Override
+    public List<FilmEntity> searchFilms(FilmSearchDTO dto) {
+        return filmRepository.findAll(FilmSpecifications.createSpecification(dto));
+    }
+
+
 }

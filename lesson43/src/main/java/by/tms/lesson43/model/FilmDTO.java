@@ -30,4 +30,7 @@ public class FilmDTO {
     @Max(value = 2025, message = "{film.year.size}")
     private int year;
 
+    private String description;
+
+
 }

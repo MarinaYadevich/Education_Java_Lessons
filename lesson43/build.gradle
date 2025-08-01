@@ -18,6 +18,9 @@ repositories {
 }
 
 dependencies {
+	implementation 'org.flywaydb:flyway-core'
+	implementation 'org.flywaydb:flyway-database-postgresql'
+
 	compileOnly("org.projectlombok:lombok:1.18.38")
 	annotationProcessor("org.projectlombok:lombok:1.18.38")
 
@@ -38,4 +41,5 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
 
