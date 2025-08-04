@@ -1,6 +1,8 @@
 package by.tms.lesson43.controller;
 
+import by.tms.lesson43.entity.FilmEntity;
 import by.tms.lesson43.model.FilmDTO;
+import by.tms.lesson43.model.FilmSearchDTO;
 import by.tms.lesson43.service.FilmService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -11,7 +13,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+
+
+import java.util.List;
 
 @Controller
 @RequestMapping("/film")
@@ -38,9 +42,9 @@ public class FilmController {
     }
 
     @GetMapping("/search")
-    public String searchFilm(@RequestParam String title, Model model) {
-        var result = filmService.findFilmByTitle(title);
-        model.addAttribute("films", result);
+    public String search(@ModelAttribute FilmSearchDTO dto, Model model) {
+        List<FilmEntity> films = filmService.searchFilms(dto);
+        model.addAttribute("films", films);
         model.addAttribute("film", new FilmDTO());
         return "films-form";
     }

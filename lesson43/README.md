@@ -16,3 +16,16 @@ Implement:
 1) saving the film library in the DB
 2) getting all the films
 3) organize the ability to search by name (full match)
+
+## Lesson 45
+## Homework
+
+You need to add flyway to the previous film library project and create scripts to create tables.
+
+Organize search by the following fields (add to the entity):
+1) name (a complete match)
+2) number of pages from
+3) number of pages to
+4) by description (using like)
+
+Each search criterion is optional.

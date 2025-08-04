@@ -31,4 +31,10 @@ public class FilmEntity {
 
     @Column(nullable = false)
     private int year;
+
+    @Column
+    private String description;
+
+    @Column(name = "page_count")
+    private Integer pageCount;
 }
