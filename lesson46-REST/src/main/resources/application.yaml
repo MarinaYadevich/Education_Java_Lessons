@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: lesson46-REST
+
+  datasource:
+    username: postgres
+    url: jdbc:postgresql://localhost:5432/postgres
+    password: postgres
+
+    driver-class-name: org.postgresql.Driver
+
+
